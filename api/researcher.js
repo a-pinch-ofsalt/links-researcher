@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
             // Unpack the stringified arrays
-            const { links: links, questions: questionsString } = req.body;
+            const { links: links, questions: questions } = req.body;
 
             console.log(`Processing request. Links: ${links} | Questions: ${questions}`);
 
