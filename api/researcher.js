@@ -4,11 +4,7 @@ export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
             // Unpack the stringified arrays
-            const { links: linksString, questions: questionsString } = req.body;
-
-            // Parse strings into actual arrays
-            const links = JSON.parse(linksString);
-            const questions = JSON.parse(questionsString);
+            const { links: links, questions: questionsString } = req.body;
 
             console.log(`Processing request. Links: ${links} | Questions: ${questions}`);
 
