@@ -87,6 +87,7 @@ export default async function handler(req, res) {
                         answers[questionIndex] = answer;
                     }
                 }
+                console.log(`answers: ${answers}`);
             }
 
             // Send the final answers
