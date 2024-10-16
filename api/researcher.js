@@ -3,7 +3,12 @@ import fetch from 'node-fetch';
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         try {
-            const { links, questions } = req.body;
+            // Unpack the stringified arrays
+            const { links: linksString, questions: questionsString } = req.body;
+
+            // Parse strings into actual arrays
+            const links = JSON.parse(linksString);
+            const questions = JSON.parse(questionsString);
 
             console.log(`Processing request. Links: ${links} | Questions: ${questions}`);
 
