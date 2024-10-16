@@ -15,7 +15,7 @@ export default async function handler(req, res) {
                 console.log(`Checking link: ${link}`);
 
                 // Fetch page content
-                const pageContentResponse = await fetch('https://url-content-retriever.vercel.app', {
+                const pageContentResponse = await fetch('https://url-content-retriever.vercel.app/api/retriever', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
